@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:padding="10dp"
+    app:cardElevation="20dp"
+    card_view:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:clipToPadding="false">
+
+        <TextView
+        android:id="@+id/orderId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:text="Order Id:"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/order_UserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderId"
+            android:fontFamily="@font/raleway"
+            android:padding="5dp"
+            android:text="@string/username"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/order_totalPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderId"
+            android:layout_toEndOf="@+id/order_UserName"
+            android:fontFamily="@font/raleway"
+            android:gravity="right"
+            android:padding="5dp"
+            android:text="Total:"
+            android:textColor="#000"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/orderDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Order Details"
+            android:layout_centerHorizontal="true"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:layout_below="@+id/order_totalPrice"
+            android:fontFamily="@font/raleway"
+            android:background="@android:color/black"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="5dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000"
+            android:layout_below="@+id/orderDetails"
+            android:layout_marginStart="-10dp"
+            android:layout_marginEnd="-10dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

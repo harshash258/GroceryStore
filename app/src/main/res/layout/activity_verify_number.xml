@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.VerifyPhoneNumber"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/m"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="@string/note"
+        android:textSize="16sp"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/txv2"
+        android:layout_below="@+id/m"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:textColor="@android:color/holo_blue_dark"/>
+    <TextView
+        android:id="@+id/txv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/raleway"
+        android:layout_above="@+id/editText_otp"
+        android:text="Enter the OTP"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/editText_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/border"
+        android:padding="15dp"
+        android:hint="@string/otp"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="6"/>
+
+    <Button
+        android:id="@+id/verifyOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_otp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@color/red"
+        android:padding="15dp"
+        android:text="@string/submit"
+        android:textAlignment="center"
+        android:textColor="#eee"
+        android:textSize="22sp"/>
+</RelativeLayout>

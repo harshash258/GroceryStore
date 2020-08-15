@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Activities.RegisterPhoneNumber">
+
+
+    <TextView
+        android:id="@+id/txv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:text="@string/create_a_account_to_view_product_or_place_order"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:textColor="@color/buttonColor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/raleway"
+        android:layout_above="@+id/editText_PhoneNumber"
+        android:gravity="center"
+        android:text="@string/enter_your_phone_number"
+        android:textSize="24sp" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:ccp_autoFormatNumber="true"
+        android:layout_centerVertical="true"
+        />
+
+    <EditText
+        android:id="@+id/editText_PhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/ccp"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:backgroundTint="@color/red"
+        android:hint="@string/phone_number"
+        android:inputType="phone"
+        android:padding="15dp"
+        android:layout_centerVertical="true"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_PhoneNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@color/red"
+        android:padding="15dp"
+        android:text="@string/submit"
+        android:textAlignment="center"
+        android:textColor="#eee"
+        android:textSize="15sp" />
+</RelativeLayout>

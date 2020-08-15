@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_transparent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:theme="@style/Theme.MaterialComponents.DayNight"
+    tools:context=".Activities.DisplayProductDetails">
+
+
+    <ImageView
+        android:id="@+id/display_ProductImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/material"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/display_ProductImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_rectangle"
+        android:padding="40dp"
+        android:rotationX="15"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/display_ProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/product_name"
+                android:textColor="#eee"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/display_ProductDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/display_ProductName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/product_description"
+                android:textColor="#eee"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/display_ProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/display_ProductDesc"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/product_price"
+                android:textColor="#eee"
+                android:textSize="18sp" />
+
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:id="@+id/enb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/display_ProductPrice"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                app:backGroundColor="@color/buttonColor"
+                app:finalNumber="50"
+                app:initialNumber="1"
+                app:textColor="#eee" />
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/display_AddtoCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/buttonColor"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/add_to_cart"
+        android:textColor="#eee"
+        android:textSize="20sp" />
+
+</RelativeLayout>
